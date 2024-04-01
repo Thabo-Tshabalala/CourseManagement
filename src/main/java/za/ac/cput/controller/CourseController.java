@@ -29,4 +29,9 @@ private CourseService courseService;
     courseService.addCourse( course);
 
     }
+@RequestMapping(method = RequestMethod.PUT, value = "/courses/{id}")
+public void updateCourse(@RequestBody Course course,@PathVariable String id){
+    courseService.updateCourse(id, course);
+
+}
 }

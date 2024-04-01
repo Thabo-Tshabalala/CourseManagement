@@ -28,4 +28,14 @@ public class CourseService {
     public void addCourse(Course course) {
         courses.add(course);
     }
+
+    public void updateCourse(String id, Course course) {
+        for (int i =0; i<courses.size(); i++){
+            Course c = courses.get(i);
+            if(c.getCourseId().equals(id)){
+                courses.set(i,course);
+                return;
+            }
+        }
+    }
 }
