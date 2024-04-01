@@ -38,4 +38,9 @@ public class CourseService {
             }
         }
     }
+
+
+    public void deleteCourse(String id) {
+        courses.removeIf(c -> c.getCourseId().equals(id));
+    }
 }

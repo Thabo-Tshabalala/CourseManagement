@@ -34,4 +34,9 @@ public void updateCourse(@RequestBody Course course,@PathVariable String id){
     courseService.updateCourse(id, course);
 
 }
+    @RequestMapping(method = RequestMethod.DELETE, value = "/courses/{id}")
+    public void deleteCourse(@PathVariable String id){
+         courseService.deleteCourse(id);
+
+    }
 }
