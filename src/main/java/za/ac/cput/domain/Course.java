@@ -1,7 +1,11 @@
 package za.ac.cput.domain;
 
-public class Course {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
+public class Course {
+@Id
     private String courseId;
     private String name;
     private String description;
