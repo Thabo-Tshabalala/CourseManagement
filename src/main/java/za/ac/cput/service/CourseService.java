@@ -21,7 +21,6 @@ private CourseRepository courseRepository;
 
 
     public List<Course> getALlCourses(){
-//        return  courses;
         List<Course> courses = new ArrayList<>();
          courseRepository.findAll().forEach(courses::add);
          return courses;
@@ -29,25 +28,24 @@ private CourseRepository courseRepository;
 
     public Course getCourse(String id){
 
-        return courses.stream().filter( c ->c.getCourseId().equals(id)).findFirst().get();
+//        return courses.stream().filter( c ->c.getCourseId().equals(id)).findFirst().get();
+        return courseRepository.findById(id).orElse(null);
+
     }
 
     public void addCourse(Course course) {
-        courses.add(course);
+        courseRepository.save(course);
     }
 
     public void updateCourse(String id, Course course) {
-        for (int i =0; i<courses.size(); i++){
-            Course c = courses.get(i);
-            if(c.getCourseId().equals(id)){
-                courses.set(i,course);
-                return;
+        courseRepository.save(course);
             }
-        }
-    }
+
+
 
 
     public void deleteCourse(String id) {
-        courses.removeIf(c -> c.getCourseId().equals(id));
+//        courses.removeIf(c -> c.getCourseId().equals(id));
+        courseRepository.deleteById(id);
     }
 }

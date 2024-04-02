@@ -6,9 +6,9 @@ import jakarta.persistence.Id;
 @Entity
 public class Course {
 @Id
-    private String courseId;
-    private String name;
-    private String description;
+private String courseId;
+private String name;
+private String description;
 
     public Course() {
     }
