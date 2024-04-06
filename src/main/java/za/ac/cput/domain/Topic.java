@@ -1,11 +1,12 @@
 package za.ac.cput.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.annotation.Nullable;
+import jakarta.persistence.*;
 
 @Entity
 public class Topic {
 @Id
+
 private String topicId;
 private String name;
 private String description;

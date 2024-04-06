@@ -31,7 +31,8 @@ private TopicService topicService;
     }
 @PutMapping( "/topics/{id}")
 public void updateTopic(@RequestBody Topic topic,@PathVariable String id){
-topicService.updateTopic(id,topic);
+    topicService.updateTopic(id, topic);
+
 }
     @DeleteMapping ("/topics/{id}")
     public void deleteTopic(@PathVariable String id){
