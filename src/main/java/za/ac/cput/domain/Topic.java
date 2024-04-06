@@ -4,27 +4,27 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Course {
+public class Topic {
 @Id
-private String courseId;
+private String topicId;
 private String name;
 private String description;
 
-    public Course() {
+    public Topic() {
     }
 
-    public Course(String courseId, String name, String description) {
-        this.courseId = courseId;
+    public Topic(String topicId, String name, String description) {
+        this.topicId = topicId;
         this.name = name;
         this.description = description;
     }
 
-    public String getCourseId() {
-        return courseId;
+    public String getTopicId() {
+        return topicId;
     }
 
-    public void setCourseId(String courseId) {
-        this.courseId = courseId;
+    public void setTopicId(String topicId) {
+        this.topicId = topicId;
     }
 
     public String getName() {
