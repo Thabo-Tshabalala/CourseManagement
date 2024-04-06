@@ -2,6 +2,7 @@ package za.ac.cput.domain;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
+import za.ac.cput.util.Helper;
 
 @Entity
 public class Topic {
