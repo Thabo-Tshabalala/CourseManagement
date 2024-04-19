@@ -14,9 +14,12 @@ import java.util.Optional;
 public class CourseService {
 
     //Creates instances of the class when the program starts
-    @Autowired
-private CourseRepository courseRepository;
 
+    CourseRepository courseRepository; //Using autowired here is called field injection and it is not recommended
+    @Autowired
+    CourseService(CourseRepository repository){
+        this.courseRepository = repository;
+    }
 
 
 

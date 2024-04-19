@@ -20,12 +20,12 @@ public class CourseController {
             return courseService.getALlCourses();
 
         }
-        @RequestMapping("/courses/{id}")
+        @RequestMapping("/topics/{topicId}/courses/{id}")
         public Course getCourse(@PathVariable String id){
 
             return courseService.getCourse(id);
         }
-        @PostMapping( "/courses")
+        @PostMapping( "/courses/{topicId}/courses/{id}")
         public void addCourse(@RequestBody Course course){
             courseService.addCourse( course);
 

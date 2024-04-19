@@ -2,9 +2,12 @@ package za.ac.cput.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Course {
+    @OneToOne
+   private Topic topic;
 @Id
 
 private String courseId;
@@ -15,9 +18,11 @@ private String description;
     }
 
     public Course(String courseId, String name, String description) {
+        super();
         this.courseId = courseId;
         this.name = name;
         this.description = description;
+
     }
 
     public String getTopicId() {
